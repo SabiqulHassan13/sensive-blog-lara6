@@ -15,6 +15,11 @@
   <link rel="stylesheet" href="{{ asset('backend') }}/dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  <!-- summernote -->
+  <link rel="stylesheet" href="{{ asset('backend') }}/plugins/summernote/summernote-bs4.css">
+
+
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
@@ -32,17 +37,6 @@
 
     </ul>
 
-    <!-- SEARCH FORM -->
-<!--     <form class="form-inline ml-3">
-      <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-    </form> -->
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
@@ -225,7 +219,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{ route('admin.categories.create') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Create Category</p>
                 </a>
@@ -250,7 +244,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{ route('admin.tags.create') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Create Tag</p>
                 </a>
@@ -275,7 +269,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{ route('admin.posts.create') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Create Post</p>
                 </a>
@@ -352,6 +346,28 @@
 <script src="{{ asset('backend') }}/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('backend') }}/dist/js/demo.js"></script>
+
+<!-- bs-custom-file-input -->
+<script src="{{ asset('backend') }}/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<!-- Custom File Input -->
+<script type="text/javascript">
+$(document).ready(function () {
+  bsCustomFileInput.init();
+});
+</script>
+<!-- Summernote -->
+<script src="{{ asset('backend') }}/plugins/summernote/summernote-bs4.min.js"></script>
+<script>
+  $(function () {
+    // Summernote
+    $('.textarea').summernote({
+      height: 300,                 // set editor height
+      minHeight: null,             // set minimum height of editor
+      maxHeight: null,             // set maximum height of editor
+      focus: true   
+    });
+  })
+</script>
 
 
 </body>
