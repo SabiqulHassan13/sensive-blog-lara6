@@ -11,6 +11,8 @@
 |
 */
 
+================== Frontend Routes ==================
+
 // Route::get('/', function () {
 //     return view('frontend.master');
 // });
@@ -21,10 +23,15 @@ Route::get('/post-details', 'Frontend\FrontPageController@postDetails')->name('p
 Route::get('/category-post', 'Frontend\FrontPageController@categoryPost')->name('category.post');
 
 
+================== Auth Routes ==================
+
 Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
 
 
+================== Backend Routes ==================
+
 Route::get('/admin', function () {
-    return view('backend.master');
+    // return view('backend.master');
+    return view('backend.dashboard');
 });
