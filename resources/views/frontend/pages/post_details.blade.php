@@ -2,7 +2,7 @@
 
 @section('banner-section')
 
-	@include('frontend.includes._post_banner')
+	@include('frontend.includes._post_details_banner')
 	
 @endsection
 

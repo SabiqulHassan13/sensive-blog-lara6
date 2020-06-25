@@ -21,7 +21,7 @@ class FrontPageController extends Controller
 	}
 
 	public function postDetails () {
-		return view('frontend.pages.post');
+		return view('frontend.pages.post_details');
 	}
 
 
