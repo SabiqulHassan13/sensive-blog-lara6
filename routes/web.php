@@ -31,6 +31,14 @@ Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
 
 
+Route::get('admin/login', function () {
+	return view('backend.auth.login');
+});
+Route::get('admin/register', function () {
+	return view('backend.auth.register');
+});
+
+
 
 
 // ================== Backend Routes ==================
@@ -38,7 +46,7 @@ Auth::routes();
 Route::get('/admin', function () {
     // return view('backend.master');
     return view('backend.dashboard');
-});
+})->name('admin.home');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Backend', 'as' => 'admin.'], function () {
 
