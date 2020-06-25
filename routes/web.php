@@ -11,12 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.master');
-});
+// Route::get('/', function () {
+//     return view('frontend.master');
+// });
+
+Route::get('/', 'Frontend\FrontPageController@home')->name('home');
+Route::get('/contact-us', 'Frontend\FrontPageController@contact')->name('contact');
+Route::get('/post-details', 'Frontend\FrontPageController@postDetails')->name('post');
+Route::get('/category-post', 'Frontend\FrontPageController@categoryPost')->name('category.post');
+
 
 Auth::routes();
-
 // Route::get('/home', 'HomeController@index')->name('home');
 
 
