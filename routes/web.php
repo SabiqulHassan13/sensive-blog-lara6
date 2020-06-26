@@ -37,6 +37,9 @@ Route::get('admin/login', function () {
 Route::get('admin/register', function () {
 	return view('backend.auth.register');
 });
+Route::get('admin/forgot-password', function () {
+	return view('backend.auth.passwords.forgot');
+});
 
 
 
@@ -78,6 +81,16 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Backend', 'as' => 'admin.'], 
 	// Route::get('/tags/{id}/edit', 'TagController@edit')->name('tags.edit');
 	// Route::put('/tags/{id}', 'TagController@update')->name('tags.update');
 	// Route::delete('/tags/{id}', 'TagController@destroy')->name('tags.destroy');
+
+
+	// User Routes Here
+	Route::get('users', 'UserController@index')->name('users.index');
+	Route::get('/users/create', 'UserController@create')->name('users.create');
+	// Route::post('/users', 'UserController@store')->name('users.store');
+	// Route::get('/users/{id}', 'UserController@show')->name('users.show');
+	// Route::get('/users/{id}/edit', 'UserController@edit')->name('users.edit');
+	// Route::put('/users/{id}', 'UserController@update')->name('users.update');
+	// Route::delete('/users/{id}', 'UserController@destroy')->name('users.destroy');
 
 
 
