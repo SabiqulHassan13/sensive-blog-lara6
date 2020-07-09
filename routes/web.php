@@ -18,10 +18,6 @@
 // });
 
 Route::get('/', 'Frontend\FrontPageController@home')->name('home');
-Route::get('/contact-us', 'Frontend\FrontPageController@contact')->name('contact');
-Route::get('/post-details', 'Frontend\FrontPageController@postDetails')->name('post');
-Route::get('/category-post', 'Frontend\FrontPageController@categoryPost')->name('category.post');
-
 
 
 
@@ -56,7 +52,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Backend', 'as' => 'admin.'], 
 	// Post Routes Here
 	Route::get('/posts', 'PostController@index')->name('posts.index');
 	Route::get('/posts/create', 'PostController@create')->name('posts.create');
-	// Route::post('/posts', 'PostController@store')->name('posts.store');
+	Route::post('/posts', 'PostController@store')->name('posts.store');
 	// Route::get('/posts/{id}', 'PostController@show')->name('posts.show');
 	// Route::get('/posts/{id}/edit', 'PostController@edit')->name('posts.edit');
 	// Route::put('/posts/{id}', 'PostController@update')->name('posts.update');

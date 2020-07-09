@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use App\Post;
+
 
 class PostController extends Controller
 {
@@ -14,7 +17,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        // return view('backend.posts.index');
+        return view('backend.posts.index');
+        // return "hello";
     }
 
     /**
@@ -35,7 +39,26 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // return $request->all();
+
+        $this->validate($request, [
+            'title'     => 'required',
+            'body'      => 'required',
+            'image'     => 'nullable',
+            'status'    => 'required'
+        ]);
+
+        $post = new Post();
+        $post->title = $request->title; 
+        $post->slug = Str::slug($request->title); 
+        $post->body = $request->body; 
+        $post->status = $request->status; 
+        // $post->image = $request->image; 
+        $post->save();
+
+        return redirect()->route('admin.posts.index');
+
+
     }
 
     /**
