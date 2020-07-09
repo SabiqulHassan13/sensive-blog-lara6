@@ -1,288 +1,490 @@
 <!DOCTYPE html>
-<html lang="zxx" class="no-js">
-
+<html lang="en">
 <head>
-	<!-- Mobile Specific Meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- Favicon-->
-	<link rel="shortcut icon" href="{{ asset('frontend') }}/img/fav.png">
-	<!-- Author Meta -->
-	<meta name="author" content="codepixer">
-	<!-- Meta Description -->
-	<meta name="description" content="">
-	<!-- Meta Keyword -->
-	<meta name="keywords" content="">
-	<!-- meta character set -->
-	<meta charset="UTF-8">
-	<!-- Site Title -->
-	<title>Home | Ruft Blog</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sensive Blog - Home</title>
+	<link rel="icon" href="{{ asset('frontend') }}/img/Fevicon.png" type="image/png">
 
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,500" rel="stylesheet">
-	<!--
-			CSS
-			============================================= -->
-	<link rel="stylesheet" href="{{ asset('frontend') }}/css/linearicons.css">
-	<link rel="stylesheet" href="{{ asset('frontend') }}/css/font-awesome.min.css">
-	<link rel="stylesheet" href="{{ asset('frontend') }}/css/bootstrap.css">
-	<link rel="stylesheet" href="{{ asset('frontend') }}/css/magnific-popup.css">
-	<link rel="stylesheet" href="{{ asset('frontend') }}/css/nice-select.css">
-	<link rel="stylesheet" href="{{ asset('frontend') }}/css/animate.min.css">
-	<link rel="stylesheet" href="{{ asset('frontend') }}/css/owl.carousel.css">
-	<link rel="stylesheet" href="{{ asset('frontend') }}/css/main.css">
+  <link rel="stylesheet" href="{{ asset('frontend') }}/vendors/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ asset('frontend') }}/vendors/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="{{ asset('frontend') }}/vendors/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="{{ asset('frontend') }}/vendors/linericon/style.css">
+  <link rel="stylesheet" href="{{ asset('frontend') }}/vendors/owl-carousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="{{ asset('frontend') }}/vendors/owl-carousel/owl.carousel.min.css">
+
+  <link rel="stylesheet" href="{{ asset('frontend') }}/css/style.css">
 </head>
-
 <body>
-	<!-- Start header Area -->
-	<header id="header">
-		<div class="container box_1170 main-menu">
-			<div class="row align-items-center justify-content-between d-flex">
-				<div id="logo">
-					<a href="index.html"><img src="{{ asset('frontend') }}/img/logo.png" alt="" title="" /></a>
-				</div>
-				<nav id="nav-menu-container">
-					<ul class="nav-menu">
-						<li class="menu-active"><a href="{{ route('home') }}">Home</a></li>
-						<li class="menu-has-children"><a href="">Category</a>
-							<ul>
-								<li><a href="{{ route('category.post') }}">Elements</a></li>
-							</ul>
-						</li>
-						<li class="menu-has-children"><a href="">Blog</a>
-							<ul>
-								<li><a href="{{ route('post') }}">Blog Details</a></li>
-							</ul>
-						</li>
-						<li><a href="">Contact</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</header>
-	<!-- End header Area -->
+  <!--================Header Menu Area =================-->
+  <header class="header_area">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container box_1620">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav justify-content-center">
+              <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
+              <li class="nav-item"><a class="nav-link" href="archive.html">Archive</a></li> 
+              <li class="nav-item"><a class="nav-link" href="category.html">Category</a>
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">Pages</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="blog-details.html">Blog Details</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right navbar-social">
+              <li><a href="#"><i class="ti-facebook"></i></a></li>
+              <li><a href="#"><i class="ti-twitter-alt"></i></a></li>
+              <li><a href="#"><i class="ti-instagram"></i></a></li>
+              <li><a href="#"><i class="ti-skype"></i></a></li>
+            </ul>
+          </div> 
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!--================Header Menu Area =================-->
+  
+  <main class="site-main">
+    <!--================Hero Banner start =================-->  
+    <section class="mb-30px">
+      <div class="container">
+        <div class="hero-banner">
+          <div class="hero-banner__content">
+            <h3>Tours & Travels</h3>
+            <h1>Amazing Places on earth</h1>
+            <h4>December 12, 2018</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================Hero Banner end =================-->  
 
-	<!-- Start banner Area -->
-	@yield('banner-section')
-	<!-- End banner Area -->
+    <!--================ Blog slider start =================-->  
+    <section>
+      <div class="container">
+        <div class="owl-carousel owl-theme blog-slider">
+          <div class="card blog__slide text-center">
+            <div class="blog__slide__img">
+              <img class="card-img rounded-0" src="img/blog/blog-slider/blog-slide1.png" alt="">
+            </div>
+            <div class="blog__slide__content">
+              <a class="blog__slide__label" href="#">Fashion</a>
+              <h3><a href="#">New york fashion week's continued the evolution</a></h3>
+              <p>2 days ago</p>
+            </div>
+          </div>
+          <div class="card blog__slide text-center">
+            <div class="blog__slide__img">
+              <img class="card-img rounded-0" src="img/blog/blog-slider/blog-slide2.png" alt="">
+            </div>
+            <div class="blog__slide__content">
+              <a class="blog__slide__label" href="#">Fashion</a>
+              <h3><a href="#">New york fashion week's continued the evolution</a></h3>
+              <p>2 days ago</p>
+            </div>
+          </div>
+          <div class="card blog__slide text-center">
+            <div class="blog__slide__img">
+              <img class="card-img rounded-0" src="img/blog/blog-slider/blog-slide3.png" alt="">
+            </div>
+            <div class="blog__slide__content">
+              <a class="blog__slide__label" href="#">Fashion</a>
+              <h3><a href="#">New york fashion week's continued the evolution</a></h3>
+              <p>2 days ago</p>
+            </div>
+          </div>
+          <div class="card blog__slide text-center">
+            <div class="blog__slide__img">
+              <img class="card-img rounded-0" src="img/blog/blog-slider/blog-slide1.png" alt="">
+            </div>
+            <div class="blog__slide__content">
+              <a class="blog__slide__label" href="#">Fashion</a>
+              <h3><a href="#">New york fashion week's continued the evolution</a></h3>
+              <p>2 days ago</p>
+            </div>
+          </div>
+          <div class="card blog__slide text-center">
+            <div class="blog__slide__img">
+              <img class="card-img rounded-0" src="img/blog/blog-slider/blog-slide2.png" alt="">
+            </div>
+            <div class="blog__slide__content">
+              <a class="blog__slide__label" href="#">Fashion</a>
+              <h3><a href="#">New york fashion week's continued the evolution</a></h3>
+              <p>2 days ago</p>
+            </div>
+          </div>
+          <div class="card blog__slide text-center">
+            <div class="blog__slide__img">
+              <img class="card-img rounded-0" src="img/blog/blog-slider/blog-slide3.png" alt="">
+            </div>
+            <div class="blog__slide__content">
+              <a class="blog__slide__label" href="#">Fashion</a>
+              <h3><a href="#">New york fashion week's continued the evolution</a></h3>
+              <p>2 days ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--================ Blog slider end =================-->  
+
+    <!--================ Start Blog Post Area =================-->
+    <section class="blog-post-area section-margin mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="single-recent-blog-post">
+              <div class="thumb">
+                <img class="img-fluid" src="img/blog/blog1.png" alt="">
+                <ul class="thumb-info">
+                  <li><a href="#"><i class="ti-user"></i>Admin</a></li>
+                  <li><a href="#"><i class="ti-notepad"></i>January 12,2019</a></li>
+                  <li><a href="#"><i class="ti-themify-favicon"></i>2 Comments</a></li>
+                </ul>
+              </div>
+              <div class="details mt-20">
+                <a href="blog-single.html">
+                  <h3>Woman claims husband wants to name baby girl
+                    after his ex-lover sparking.</h3>
+                </a>
+                <p class="tag-list-inline">Tag: <a href="#">travel</a>, <a href="#">life style</a>, <a href="#">technology</a>, <a href="#">fashion</a></p>
+                <p>Over yielding doesn't so moved green saw meat hath fish he him from given yielding lesser cattle were fruitful lights. Given let have, lesser their made him above gathered dominion sixth. Creeping deep said can't called second. Air created seed heaven sixth created living</p>
+                <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="single-recent-blog-post">
+              <div class="thumb">
+                <img class="img-fluid" src="img/blog/blog2.png" alt="">
+                <ul class="thumb-info">
+                  <li><a href="#"><i class="ti-user"></i>Admin</a></li>
+                  <li><a href="#"><i class="ti-notepad"></i>January 12,2019</a></li>
+                  <li><a href="#"><i class="ti-themify-favicon"></i>2 Comments</a></li>
+                </ul>
+              </div>
+              <div class="details mt-20">
+                <a href="blog-single.html">
+                  <h3>Woman claims husband wants to name baby girl
+                    after his ex-lover sparking.</h3>
+                </a>
+                <p class="tag-list-inline">Tag: <a href="#">travel</a>, <a href="#">life style</a>, <a href="#">technology</a>, <a href="#">fashion</a></p>
+                <p>Over yielding doesn't so moved green saw meat hath fish he him from given yielding lesser cattle were fruitful lights. Given let have, lesser their made him above gathered dominion sixth. Creeping deep said can't called second. Air created seed heaven sixth created living</p>
+                <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="single-recent-blog-post">
+              <div class="thumb">
+                <img class="img-fluid" src="img/blog/blog3.png" alt="">
+                <ul class="thumb-info">
+                  <li><a href="#"><i class="ti-user"></i>Admin</a></li>
+                  <li><a href="#"><i class="ti-notepad"></i>January 12,2019</a></li>
+                  <li><a href="#"><i class="ti-themify-favicon"></i>2 Comments</a></li>
+                </ul>
+              </div>
+              <div class="details mt-20">
+                <a href="blog-single.html">
+                  <h3>Tourist deaths in Costa Rica jeopardize safe dest
+                    ination reputation all time. </h3>
+                </a>
+                <p class="tag-list-inline">Tag: <a href="#">travel</a>, <a href="#">life style</a>, <a href="#">technology</a>, <a href="#">fashion</a></p>
+                <p>Over yielding doesn't so moved green saw meat hath fish he him from given yielding lesser cattle were fruitful lights. Given let have, lesser their made him above gathered dominion sixth. Creeping deep said can't called second. Air created seed heaven sixth created living</p>
+                <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="single-recent-blog-post">
+              <div class="thumb">
+                <img class="img-fluid" src="img/blog/blog4.png" alt="">
+                <ul class="thumb-info">
+                  <li><a href="#"><i class="ti-user"></i>Admin</a></li>
+                  <li><a href="#"><i class="ti-notepad"></i>January 12,2019</a></li>
+                  <li><a href="#"><i class="ti-themify-favicon"></i>2 Comments</a></li>
+                </ul>
+              </div>
+              <div class="details mt-20">
+                <a href="blog-single.html">
+                  <h3>Tourist deaths in Costa Rica jeopardize safe dest
+                    ination reputation all time.  </h3>
+                </a>
+                <p class="tag-list-inline">Tag: <a href="#">travel</a>, <a href="#">life style</a>, <a href="#">technology</a>, <a href="#">fashion</a></p>
+                <p>Over yielding doesn't so moved green saw meat hath fish he him from given yielding lesser cattle were fruitful lights. Given let have, lesser their made him above gathered dominion sixth. Creeping deep said can't called second. Air created seed heaven sixth created living</p>
+                <a class="button" href="#">Read More <i class="ti-arrow-right"></i></a>
+              </div>
+            </div>
+
+            
+
+            <div class="row">
+              <div class="col-lg-12">
+                  <nav class="blog-pagination justify-content-center d-flex">
+                      <ul class="pagination">
+                          <li class="page-item">
+                              <a href="#" class="page-link" aria-label="Previous">
+                                  <span aria-hidden="true">
+                                      <i class="ti-angle-left"></i>
+                                  </span>
+                              </a>
+                          </li>
+                          <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                          <li class="page-item"><a href="#" class="page-link">2</a></li>
+                          <li class="page-item">
+                              <a href="#" class="page-link" aria-label="Next">
+                                  <span aria-hidden="true">
+                                      <i class="ti-angle-right"></i>
+                                  </span>
+                              </a>
+                          </li>
+                      </ul>
+                  </nav>
+              </div>
+            </div>
+          </div>
+
+          <!-- Start Blog Post Siddebar -->
+          <div class="col-lg-4 sidebar-widgets">
+              <div class="widget-wrap">
+                <div class="single-sidebar-widget newsletter-widget">
+                  <h4 class="single-sidebar-widget__title">Newsletter</h4>
+                  <div class="form-group mt-30">
+                    <div class="col-autos">
+                      <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''"
+                        onblur="this.placeholder = 'Enter email'">
+                    </div>
+                  </div>
+                  <button class="bbtns d-block mt-20 w-100">Subcribe</button>
+                </div>
 
 
-	<!-- Start main body Area -->
-	<div class="main-body section-gap mt--30">
-		<div class="container box_1170">
-			<div class="row">
-				@yield('content')
+                <div class="single-sidebar-widget post-category-widget">
+                  <h4 class="single-sidebar-widget__title">Catgory</h4>
+                  <ul class="cat-list mt-20">
+                    <li>
+                      <a href="#" class="d-flex justify-content-between">
+                        <p>Technology</p>
+                        <p>(03)</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="d-flex justify-content-between">
+                        <p>Software</p>
+                        <p>(09)</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="d-flex justify-content-between">
+                        <p>Lifestyle</p>
+                        <p>(12)</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="d-flex justify-content-between">
+                        <p>Shopping</p>
+                        <p>(02)</p>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="d-flex justify-content-between">
+                        <p>Food</p>
+                        <p>(10)</p>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
 
-				<div class="col-lg-4 sidebar">
-					<div class="single-widget search-widget">
-						<form class="example" action="#" style="margin:auto;max-width:300px">
-							<input type="text" placeholder="Search Posts" name="search2">
-							<button type="submit"><i class="fa fa-search"></i></button>
-						</form>
-					</div>
+                <div class="single-sidebar-widget popular-post-widget">
+                  <h4 class="single-sidebar-widget__title">Popular Post</h4>
+                  <div class="popular-post-list">
+                    <div class="single-post-list">
+                      <div class="thumb">
+                        <img class="card-img rounded-0" src="img/blog/thumb/thumb1.png" alt="">
+                        <ul class="thumb-info">
+                          <li><a href="#">Adam Colinge</a></li>
+                          <li><a href="#">Dec 15</a></li>
+                        </ul>
+                      </div>
+                      <div class="details mt-20">
+                        <a href="blog-single.html">
+                          <h6>Accused of assaulting flight attendant miktake alaways</h6>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="single-post-list">
+                      <div class="thumb">
+                        <img class="card-img rounded-0" src="img/blog/thumb/thumb2.png" alt="">
+                        <ul class="thumb-info">
+                          <li><a href="#">Adam Colinge</a></li>
+                          <li><a href="#">Dec 15</a></li>
+                        </ul>
+                      </div>
+                      <div class="details mt-20">
+                        <a href="blog-single.html">
+                          <h6>Tennessee outback steakhouse the
+                            worker diagnosed</h6>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="single-post-list">
+                      <div class="thumb">
+                        <img class="card-img rounded-0" src="img/blog/thumb/thumb3.png" alt="">
+                        <ul class="thumb-info">
+                          <li><a href="#">Adam Colinge</a></li>
+                          <li><a href="#">Dec 15</a></li>
+                        </ul>
+                      </div>
+                      <div class="details mt-20">
+                        <a href="blog-single.html">
+                          <h6>Tennessee outback steakhouse the
+                            worker diagnosed</h6>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-					<!-- <div class="single-widget protfolio-widget">
-						<img class="img-fluid" src="{{ asset('frontend') }}/img/blog/user2.png" alt="">
-						<a href="#">
-							<h4>Charlie ALison Barber</h4>
-						</a>
-						<div class="desigmation">
-							<p>Senior blog writer</p>
-						</div>
-						<p>
-							Boot camps have its supporters andit sdetractors. Some people do not understand why you should have to spend
-							money on boot camp whenyou can get. Boot camps have itssuppor ters andits detractors.
-						</p>
-						<ul>
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-							<li><a href="#"><i class="fa fa-behance"></i></a></li>
-						</ul>
-					</div> -->
+                  <div class="single-sidebar-widget tag_cloud_widget">
+                    <h4 class="single-sidebar-widget__title">Popular Post</h4>
+                    <ul class="list">
+                      <li>
+                          <a href="#">project</a>
+                      </li>
+                      <li>
+                          <a href="#">love</a>
+                      </li>
+                      <li>
+                          <a href="#">technology</a>
+                      </li>
+                      <li>
+                          <a href="#">travel</a>
+                      </li>
+                      <li>
+                          <a href="#">software</a>
+                      </li>
+                      <li>
+                          <a href="#">life style</a>
+                      </li>
+                      <li>
+                          <a href="#">design</a>
+                      </li>
+                      <li>
+                          <a href="#">illustration</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- End Blog Post Siddebar -->
+        </div>
+    </section>
+    <!--================ End Blog Post Area =================-->
+  </main>
 
-					<div class="single-widget popular-posts-widget">
-						<h4 class="title">Popular Posts</h4>
-						<div class="blog-list ">
-							<div class="single-popular-post d-flex flex-row">
-								<div class="popular-thumb">
-									<img class="img-fluid" src="{{ asset('frontend') }}/img/blog/r1.jpg" alt="">
-								</div>
-								<div class="popular-details">
-									<a href="blog-details.html">
-										<h4>Space Final Frontier</h4>
-									</a>
-									<p class="text-uppercase">02 hours ago</p>
-								</div>
-							</div>
-							<div class="single-popular-post d-flex flex-row">
-								<div class="popular-thumb">
-									<img class="img-fluid" src="{{ asset('frontend') }}/img/blog/r2.jpg" alt="">
-								</div>
-								<div class="popular-details">
-									<a href="blog-details.html">
-										<h4>The Amazing Hubble</h4>
-									</a>
-									<p class="text-uppercase">02 hours ago</p>
-								</div>
-							</div>
-							<div class="single-popular-post d-flex flex-row">
-								<div class="popular-thumb">
-									<img class="img-fluid" src="{{ asset('frontend') }}/img/blog/r3.jpg" alt="">
-								</div>
-								<div class="popular-details">
-									<a href="blog-details.html">
-										<h4>Astronomy Astrology</h4>
-									</a>
-									<p class="text-uppercase">02 hours ago</p>
-								</div>
-							</div>
-							<div class="single-popular-post d-flex flex-row">
-								<div class="popular-thumb">
-									<img class="img-fluid" src="{{ asset('frontend') }}/img/blog/r4.jpg" alt="">
-								</div>
-								<div class="popular-details">
-									<a href="blog-details.html">
-										<h4>Asteroids telescope</h4>
-									</a>
-									<p class="text-uppercase">02 hours ago</p>
-								</div>
-							</div>
-						</div>
-					</div>
+  <!--================ Start Footer Area =================-->
+  <footer class="footer-area section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <h6>About Us</h6>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
+              magna aliqua.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4  col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <h6>Newsletter</h6>
+            <p>Stay update with our latest</p>
+            <div class="" id="mc_embed_signup">
 
-					<div class="single-widget category-widget">
-						<h4 class="title">Post Categories</h4>
-						<ul>
-							<li><a href="#" class="justify-content-between align-items-center d-flex">
-									<p>Techlology</p> <span>37</span>
-								</a></li>
-							<li><a href="#" class="justify-content-between align-items-center d-flex">
-									<p>Lifestyle</p> <span>24</span>
-								</a></li>
-							<li><a href="#" class="justify-content-between align-items-center d-flex">
-									<p>Fashion</p> <span>59</span>
-								</a></li>
-							<li><a href="#" class="justify-content-between align-items-center d-flex">
-									<p>Art</p> <span>29</span>
-								</a></li>
-							<li><a href="#" class="justify-content-between align-items-center d-flex">
-									<p>Food</p> <span>15</span>
-								</a></li>
-							<li><a href="#" class="justify-content-between align-items-center d-flex">
-									<p>Architecture</p> <span>09</span>
-								</a></li>
-							<li><a href="#" class="justify-content-between align-items-center d-flex">
-									<p>Adventure</p> <span>44</span>
-								</a></li>
-						</ul>
-					</div>
+              <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                method="get" class="form-inline">
 
-					<div class="single-widget newsletter-widget">
-						<h4 class="title">Newsletter</h4>
-						<div id="mc_embed_signup">
-							<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-							 method="get" class="">
-								<div class="form-group" style="width: 100%">
-									<input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '"
-									 required="" type="email">
-									<div style="position: absolute; left: -5000px;">
-										<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-									</div>
+                <div class="d-flex flex-row">
 
-									<button class="primary-btn text-uppercase">
-										Subscribe Now
-										<span class="lnr lnr-arrow-right"></span>
-									</button>
-								</div>
-								<div class="info"></div>
-							</form>
-						</div>
-					</div>
+                  <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
+                    required="" type="email">
 
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Start main body Area -->
 
-	<!-- start footer Area -->
-	<footer class="footer-area section-gap">
-		<div class="container box_1170">
-			<div class="row">
-				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="single-footer-widget">
-						<h6 class="footer_title">About Us</h6>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore
-							magna aliqua.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-sm-6">
-					<div class="single-footer-widget">
-						<h6 class="footer_title">Newsletter</h6>
-						<p>Stay updated with our latest trends</p>
-						<div id="mc_embed_signup">
-							<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-							 method="get" class="subscribe_form relative">
-								<div class="input-group d-flex flex-row">
-									<input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '"
-									 required="" type="email">
-									<button class="btn sub-btn"><span class="lnr lnr-arrow-right"></span></button>
-								</div>
-								<div class="mt-10 info"></div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="single-footer-widget instafeed">
-						<h6 class="footer_title">Instagram Feed</h6>
-						<ul class="list instafeed d-flex flex-wrap">
-							<li><img src="{{ asset('frontend') }}/img/i1.jpg" alt=""></li>
-							<li><img src="{{ asset('frontend') }}/img/i2.jpg" alt=""></li>
-							<li><img src="{{ asset('frontend') }}/img/i3.jpg" alt=""></li>
-							<li><img src="{{ asset('frontend') }}/img/i4.jpg" alt=""></li>
-							<li><img src="{{ asset('frontend') }}/img/i5.jpg" alt=""></li>
-							<li><img src="{{ asset('frontend') }}/img/i6.jpg" alt=""></li>
-							<li><img src="{{ asset('frontend') }}/img/i7.jpg" alt=""></li>
-							<li><img src="{{ asset('frontend') }}/img/i8.jpg" alt=""></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-6 col-sm-6">
-					<div class="single-footer-widget f_social_wd">
-						<h6 class="footer_title">Follow Us</h6>
-						<p>Let us be social</p>
-						<div class="f_social">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-dribbble"></i></a>
-							<a href="#"><i class="fa fa-behance"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row footer-bottom d-flex justify-content-between align-items-center">
-				<p class="col-lg-12 footer-text text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                  <button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
+                  <div style="position: absolute; left: -5000px;">
+                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                  </div>
+
+                  <!-- <div class="col-lg-4 col-md-4">
+                        <button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
+                      </div>  -->
+                </div>
+                <div class="info"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="single-footer-widget mail-chimp">
+            <h6 class="mb-20">Instragram Feed</h6>
+            <ul class="instafeed d-flex flex-wrap">
+              <li><img src="img/instagram/i1.jpg" alt=""></li>
+              <li><img src="img/instagram/i2.jpg" alt=""></li>
+              <li><img src="img/instagram/i3.jpg" alt=""></li>
+              <li><img src="img/instagram/i4.jpg" alt=""></li>
+              <li><img src="img/instagram/i5.jpg" alt=""></li>
+              <li><img src="img/instagram/i6.jpg" alt=""></li>
+              <li><img src="img/instagram/i7.jpg" alt=""></li>
+              <li><img src="img/instagram/i8.jpg" alt=""></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <h6>Follow Us</h6>
+            <p>Let us be social</p>
+            <div class="footer-social d-flex align-items-center">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-dribbble"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-behance"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom d-flex justify-content-center align-items-center flex-wrap">
+        <p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
-		</div>
-	</footer>
-	<!-- End footer Area -->
+      </div>
+    </div>
+  </footer>
+  <!--================ End Footer Area =================-->
 
-	<script src="{{ asset('frontend') }}/js/vendor/jquery-2.2.4.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="{{ asset('frontend') }}/js/vendor/bootstrap.min.js"></script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-	<script src="{{ asset('frontend') }}/js/easing.min.js"></script>
-	<script src="{{ asset('frontend') }}/js/hoverIntent.js"></script>
-	<script src="{{ asset('frontend') }}/js/superfish.min.js"></script>
-	<script src="{{ asset('frontend') }}/js/jquery.ajaxchimp.min.js"></script>
-	<script src="{{ asset('frontend') }}/js/jquery.magnific-popup.min.js"></script>
-	<script src="{{ asset('frontend') }}/js/owl.carousel.min.js"></script>
-	<script src="{{ asset('frontend') }}/js/jquery.nice-select.min.js"></script>
-	<script src="{{ asset('frontend') }}/js/waypoints.min.js"></script>
-	<script src="{{ asset('frontend') }}/js/mail-script.js"></script>
-	<script src="{{ asset('frontend') }}/js/main.js"></script>
+  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script src="js/jquery.ajaxchimp.min.js"></script>
+  <script src="js/mail-script.js"></script>
+  <script src="js/main.js"></script>
 </body>
-
 </html>

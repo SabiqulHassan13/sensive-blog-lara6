@@ -13,11 +13,11 @@
 
 // ================== Frontend Routes ==================
 
-// Route::get('/', function () {
-//     return view('frontend.master');
-// });
+Route::get('/', function () {
+    return view('frontend.master');
+});
 
-Route::get('/', 'Frontend\FrontPageController@home')->name('home');
+Route::get('/home', 'Frontend\FrontPageController@home')->name('home');
 
 
 
