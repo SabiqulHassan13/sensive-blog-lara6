@@ -23,7 +23,7 @@
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container box_1620">
           <!-- Brand and toggle get grouped for better mobile display -->
-          <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+          <a class="navbar-brand logo_h" href="index.html"><img src="{{ asset('frontend') }}/img/logo.png" alt=""></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -78,7 +78,7 @@
         <div class="owl-carousel owl-theme blog-slider">
           <div class="card blog__slide text-center">
             <div class="blog__slide__img">
-              <img class="card-img rounded-0" src="img/blog/blog-slider/blog-slide1.png" alt="">
+              <img class="card-img rounded-0" src="{{ asset('frontend') }}/img/blog/blog-slider/blog-slide1.png" alt="">
             </div>
             <div class="blog__slide__content">
               <a class="blog__slide__label" href="#">Fashion</a>
@@ -88,7 +88,7 @@
           </div>
           <div class="card blog__slide text-center">
             <div class="blog__slide__img">
-              <img class="card-img rounded-0" src="img/blog/blog-slider/blog-slide2.png" alt="">
+              <img class="card-img rounded-0" src="{{ asset('frontend') }}/img/blog/blog-slider/blog-slide2.png" alt="">
             </div>
             <div class="blog__slide__content">
               <a class="blog__slide__label" href="#">Fashion</a>
@@ -98,7 +98,7 @@
           </div>
           <div class="card blog__slide text-center">
             <div class="blog__slide__img">
-              <img class="card-img rounded-0" src="img/blog/blog-slider/blog-slide3.png" alt="">
+              <img class="card-img rounded-0" src="{{ asset('frontend') }}/img/blog/blog-slider/blog-slide3.png" alt="">
             </div>
             <div class="blog__slide__content">
               <a class="blog__slide__label" href="#">Fashion</a>
@@ -108,7 +108,7 @@
           </div>
           <div class="card blog__slide text-center">
             <div class="blog__slide__img">
-              <img class="card-img rounded-0" src="img/blog/blog-slider/blog-slide1.png" alt="">
+              <img class="card-img rounded-0" src="{{ asset('frontend') }}/img/blog/blog-slider/blog-slide1.png" alt="">
             </div>
             <div class="blog__slide__content">
               <a class="blog__slide__label" href="#">Fashion</a>
@@ -118,7 +118,7 @@
           </div>
           <div class="card blog__slide text-center">
             <div class="blog__slide__img">
-              <img class="card-img rounded-0" src="img/blog/blog-slider/blog-slide2.png" alt="">
+              <img class="card-img rounded-0" src="{{ asset('frontend') }}/img/blog/blog-slider/blog-slide2.png" alt="">
             </div>
             <div class="blog__slide__content">
               <a class="blog__slide__label" href="#">Fashion</a>
@@ -128,7 +128,7 @@
           </div>
           <div class="card blog__slide text-center">
             <div class="blog__slide__img">
-              <img class="card-img rounded-0" src="img/blog/blog-slider/blog-slide3.png" alt="">
+              <img class="card-img rounded-0" src="{{ asset('frontend') }}/img/blog/blog-slider/blog-slide3.png" alt="">
             </div>
             <div class="blog__slide__content">
               <a class="blog__slide__label" href="#">Fashion</a>
@@ -148,7 +148,7 @@
           <div class="col-lg-8">
             <div class="single-recent-blog-post">
               <div class="thumb">
-                <img class="img-fluid" src="img/blog/blog1.png" alt="">
+                <img class="img-fluid" src="{{ asset('frontend') }}/img/blog/blog1.png" alt="">
                 <ul class="thumb-info">
                   <li><a href="#"><i class="ti-user"></i>Admin</a></li>
                   <li><a href="#"><i class="ti-notepad"></i>January 12,2019</a></li>
@@ -168,7 +168,7 @@
 
             <div class="single-recent-blog-post">
               <div class="thumb">
-                <img class="img-fluid" src="img/blog/blog2.png" alt="">
+                <img class="img-fluid" src="{{ asset('frontend') }}/img/blog/blog2.png" alt="">
                 <ul class="thumb-info">
                   <li><a href="#"><i class="ti-user"></i>Admin</a></li>
                   <li><a href="#"><i class="ti-notepad"></i>January 12,2019</a></li>
@@ -188,7 +188,7 @@
 
             <div class="single-recent-blog-post">
               <div class="thumb">
-                <img class="img-fluid" src="img/blog/blog3.png" alt="">
+                <img class="img-fluid" src="{{ asset('frontend') }}/img/blog/blog3.png" alt="">
                 <ul class="thumb-info">
                   <li><a href="#"><i class="ti-user"></i>Admin</a></li>
                   <li><a href="#"><i class="ti-notepad"></i>January 12,2019</a></li>
@@ -208,7 +208,7 @@
 
             <div class="single-recent-blog-post">
               <div class="thumb">
-                <img class="img-fluid" src="img/blog/blog4.png" alt="">
+                <img class="img-fluid" src="{{ asset('frontend') }}/img/blog/blog4.png" alt="">
                 <ul class="thumb-info">
                   <li><a href="#"><i class="ti-user"></i>Admin</a></li>
                   <li><a href="#"><i class="ti-notepad"></i>January 12,2019</a></li>
@@ -310,7 +310,7 @@
                   <div class="popular-post-list">
                     <div class="single-post-list">
                       <div class="thumb">
-                        <img class="card-img rounded-0" src="img/blog/thumb/thumb1.png" alt="">
+                        <img class="card-img rounded-0" src="{{ asset('frontend') }}/img/blog/thumb/thumb1.png" alt="">
                         <ul class="thumb-info">
                           <li><a href="#">Adam Colinge</a></li>
                           <li><a href="#">Dec 15</a></li>
@@ -324,7 +324,7 @@
                     </div>
                     <div class="single-post-list">
                       <div class="thumb">
-                        <img class="card-img rounded-0" src="img/blog/thumb/thumb2.png" alt="">
+                        <img class="card-img rounded-0" src="{{ asset('frontend') }}/img/blog/thumb/thumb2.png" alt="">
                         <ul class="thumb-info">
                           <li><a href="#">Adam Colinge</a></li>
                           <li><a href="#">Dec 15</a></li>
@@ -339,7 +339,7 @@
                     </div>
                     <div class="single-post-list">
                       <div class="thumb">
-                        <img class="card-img rounded-0" src="img/blog/thumb/thumb3.png" alt="">
+                        <img class="card-img rounded-0" src="{{ asset('frontend') }}/img/blog/thumb/thumb3.png" alt="">
                         <ul class="thumb-info">
                           <li><a href="#">Adam Colinge</a></li>
                           <li><a href="#">Dec 15</a></li>
@@ -439,14 +439,14 @@
           <div class="single-footer-widget mail-chimp">
             <h6 class="mb-20">Instragram Feed</h6>
             <ul class="instafeed d-flex flex-wrap">
-              <li><img src="img/instagram/i1.jpg" alt=""></li>
-              <li><img src="img/instagram/i2.jpg" alt=""></li>
-              <li><img src="img/instagram/i3.jpg" alt=""></li>
-              <li><img src="img/instagram/i4.jpg" alt=""></li>
-              <li><img src="img/instagram/i5.jpg" alt=""></li>
-              <li><img src="img/instagram/i6.jpg" alt=""></li>
-              <li><img src="img/instagram/i7.jpg" alt=""></li>
-              <li><img src="img/instagram/i8.jpg" alt=""></li>
+              <li><img src="{{ asset('frontend') }}/img/instagram/i1.jpg" alt=""></li>
+              <li><img src="{{ asset('frontend') }}/img/instagram/i2.jpg" alt=""></li>
+              <li><img src="{{ asset('frontend') }}/img/instagram/i3.jpg" alt=""></li>
+              <li><img src="{{ asset('frontend') }}/img/instagram/i4.jpg" alt=""></li>
+              <li><img src="{{ asset('frontend') }}/img/instagram/i5.jpg" alt=""></li>
+              <li><img src="{{ asset('frontend') }}/img/instagram/i6.jpg" alt=""></li>
+              <li><img src="{{ asset('frontend') }}/img/instagram/i7.jpg" alt=""></li>
+              <li><img src="{{ asset('frontend') }}/img/instagram/i8.jpg" alt=""></li>
             </ul>
           </div>
         </div>
