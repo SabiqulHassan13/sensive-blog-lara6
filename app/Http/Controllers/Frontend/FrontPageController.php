@@ -16,8 +16,8 @@ class FrontPageController extends Controller
 		return view('frontend.pages.contact');
 	}
 
-	public function categoryPost () {
-		return view('frontend.pages.category_post');
+	public function postByCategory () {
+		return view('frontend.pages.post_by_category');
 	}
 
 	public function postDetails () {

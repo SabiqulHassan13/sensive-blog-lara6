@@ -18,6 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('/home', 'Frontend\FrontPageController@home')->name('home');
+Route::get('/contact', 'Frontend\FrontPageController@contact')->name('contact');
+Route::get('/post-by-category', 'Frontend\FrontPageController@postByCategory')->name('post.category');
+Route::get('/post-details', 'Frontend\FrontPageController@postDetails')->name('post.details');
 
 
 
