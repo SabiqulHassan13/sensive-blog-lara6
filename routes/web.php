@@ -13,9 +13,9 @@
 
 // ================== Frontend Routes ==================
 
-Route::get('/', function () {
-    return view('frontend.master');
-});
+// Route::get('/', function () {
+//     return view('frontend.master');
+// });
 
 Route::get('/home', 'Frontend\FrontPageController@home')->name('home');
 Route::get('/contact', 'Frontend\FrontPageController@contact')->name('contact');
