@@ -62,7 +62,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-8 ">
+        <div class="col-md-8 border-left border-secondary pl-5 ">
           <form action="#" class="form-contact contact_form" method="post" id="contactForm" novalidate="novalidate">
             @csrf 
             
