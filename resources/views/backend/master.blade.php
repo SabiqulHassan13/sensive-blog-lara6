@@ -18,6 +18,9 @@
 
   <!-- summernote -->
   <link rel="stylesheet" href="{{ asset('backend') }}/plugins/summernote/summernote-bs4.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="{{ asset('backend') }}/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="{{ asset('backend') }}/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
 
 
 </head>
@@ -159,7 +162,16 @@
           <!-- Menu Footer-->
           <li class="user-footer">
             <a href="#" class="btn btn-default btn-flat">Profile</a>
-            <a href="#" class="btn btn-default btn-flat float-right">Sign out</a>
+            <!-- <a href="#" class="btn btn-default btn-flat float-right">Sign out</a> -->
+            <a href="{{ route('logout') }}" class="btn btn-default btn-flat float-right"
+                onclick="event.preventDefault();
+                              document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+            </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
           </li>
         </ul>
       </li>
@@ -257,7 +269,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{ route('admin.categories.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Category List</p>
                 </a>
@@ -403,6 +415,29 @@ $(document).ready(function () {
 
 <!-- Ckeditor Js -->
 
+<!-- DataTables -->
+<script src="{{ asset('backend') }}/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="{{ asset('backend') }}/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="{{ asset('backend') }}/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="{{ asset('backend') }}/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+    // $('#example2').DataTable({
+    //   "paging": true,
+    //   "lengthChange": false,
+    //   "searching": false,
+    //   "ordering": true,
+    //   "info": true,
+    //   "autoWidth": false,
+    //   "responsive": true,
+    // });
+  });
+</script>
 
 </body>
 </html>
