@@ -125,6 +125,7 @@
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
       </li>
+      <!-- Legecy User Dropdown Menu -->
       <li class="nav-item dropdown user-menu">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
           <img src="{{ asset('backend') }}/dist/img/avatar5.png" class="user-image img-circle elevation-2" alt="User Image">
@@ -208,6 +209,37 @@
             </a>
           </li>
           
+          <!-- User Management Module -->
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                User Management
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Users</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Roles</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Permissions</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
           <!-- Category Module -->
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
@@ -356,7 +388,7 @@ $(document).ready(function () {
 });
 </script>
 <!-- Summernote -->
-<script src="{{ asset('backend') }}/plugins/summernote/summernote-bs4.min.js"></script>
+<!-- <script src="{{ asset('backend') }}/plugins/summernote/summernote-bs4.min.js"></script>
 <script>
   $(function () {
     // Summernote
@@ -367,7 +399,9 @@ $(document).ready(function () {
       focus: true   
     });
   })
-</script>
+</script> -->
+
+<!-- Ckeditor Js -->
 
 
 </body>
