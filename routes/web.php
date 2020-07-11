@@ -63,33 +63,14 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Backend', 'as' => 'admin.'], 
 
 
 	// Category Routes Here
-	Route::get('categories', 'CategoryController@index')->name('categories.index');
-	Route::get('/categories/create', 'CategoryController@create')->name('categories.create');
-	// Route::post('/categories', 'CategoryController@store')->name('categories.store');
-	// Route::get('/categories/{id}', 'CategoryController@show')->name('categories.show');
-	// Route::get('/categories/{id}/edit', 'CategoryController@edit')->name('categories.edit');
-	// Route::put('/categories/{id}', 'CategoryController@update')->name('categories.update');
-	// Route::delete('/categories/{id}', 'CategoryController@destroy')->name('categories.destroy');
-
+	Route::resource('categories', 'CategoryController');
 
 	// Tag Routes Here
-	Route::get('tags', 'TagController@index')->name('tags.index');
-	Route::get('/tags/create', 'TagController@create')->name('tags.create');
-	// Route::post('/tags', 'TagController@store')->name('tags.store');
-	// Route::get('/tags/{id}', 'TagController@show')->name('tags.show');
-	// Route::get('/tags/{id}/edit', 'TagController@edit')->name('tags.edit');
-	// Route::put('/tags/{id}', 'TagController@update')->name('tags.update');
-	// Route::delete('/tags/{id}', 'TagController@destroy')->name('tags.destroy');
-
+	Route::resource('tags', 'TagController');
 
 	// User Routes Here
-	Route::get('users', 'UserController@index')->name('users.index');
-	Route::get('/users/create', 'UserController@create')->name('users.create');
-	// Route::post('/users', 'UserController@store')->name('users.store');
-	// Route::get('/users/{id}', 'UserController@show')->name('users.show');
-	// Route::get('/users/{id}/edit', 'UserController@edit')->name('users.edit');
-	// Route::put('/users/{id}', 'UserController@update')->name('users.update');
-	// Route::delete('/users/{id}', 'UserController@destroy')->name('users.destroy');
+	Route::resource('users', 'UserController');
+
 
 
 

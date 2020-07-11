@@ -23,7 +23,7 @@
 
             <div class="form-group">
               <label for="body">Post Body</label>
-              <textarea name="body" class="textarea" id="body" placeholder="Enter Post Body"></textarea>
+              <textarea rows="5" name="body" class="textarea" id="body" placeholder="Enter Post Body"></textarea>
             </div>
 
             <div class="form-group">
