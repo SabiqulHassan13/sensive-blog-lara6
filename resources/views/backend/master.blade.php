@@ -18,9 +18,13 @@
 
   <!-- summernote -->
   <link rel="stylesheet" href="{{ asset('backend') }}/plugins/summernote/summernote-bs4.css">
+
   <!-- DataTables -->
   <link rel="stylesheet" href="{{ asset('backend') }}/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="{{ asset('backend') }}/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    
+  <!-- Toaster CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css">
 
 
 </head>
@@ -293,7 +297,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{ route('admin.tags.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tag List</p>
                 </a>
@@ -318,7 +322,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="" class="nav-link">
+                <a href="{{ route('admin.posts.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Post List</p>
                 </a>
@@ -423,20 +427,46 @@ $(document).ready(function () {
 <script>
   $(function () {
     $("#example1").DataTable({
-      "responsive": true,
-      "autoWidth": false,
+      // "responsive": true,
+      // "autoWidth": false,
     });
-    // $('#example2').DataTable({
+    // $('#example1').DataTable({
     //   "paging": true,
     //   "lengthChange": false,
     //   "searching": false,
     //   "ordering": true,
     //   "info": true,
-    //   "autoWidth": false,
+    //   "autoWidth": true,
     //   "responsive": true,
     // });
   });
 </script>
+
+<!-- Toaster Js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+<script>
+  @if(Session::has('message'))
+    var type = "{{ Session::get('alert-type', 'info') }}";
+    switch(type){
+        case 'info':
+            toastr.info("{{ Session::get('message') }}");
+            break;
+
+        case 'warning':
+            toastr.warning("{{ Session::get('message') }}");
+            break;
+
+        case 'success':
+            toastr.success("{{ Session::get('message') }}");
+            break;
+
+        case 'error':
+            toastr.error("{{ Session::get('message') }}");
+            break;
+    }
+  @endif
+</script>
+
 
 </body>
 </html>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Tag;
 
 class TagController extends Controller
 {
@@ -15,6 +16,9 @@ class TagController extends Controller
     public function index()
     {
         //
+        $tags = Tag::all();
+
+        return view('backend.tags.index', ['tags' => $tags]);
     }
 
     /**

@@ -17,8 +17,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('backend.posts.index');
-        // return "hello";
+        $posts = Post::all();
+
+        return view('backend.posts.index', ['posts' => $posts]);
     }
 
     /**
